@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="sticky-nav">
+        <h1>Our Services</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                
+            </ul>
+            <div class="search-container">
+                <button class="search-toggle">🔍</button>
+                <input type="text" class="search-input" placeholder="Search...">
+            </div>
+        </nav>
+    </header>
+    <div class="services-container">
+        <section class="service">
+            <h2>Lawn Care</h2>
+            <img src="images/lawn-care.jpg" alt="Lawn Care">
+            <p>Our lawn care services include mowing, fertilization, weed control, and aeration to keep your lawn healthy and green.</p>
+        </section>
+        <section class="service">
+            <h2>Landscaping</h2>
+            <img src="images/landscaping.jpg" alt="Landscaping">
+            <p>We offer professional landscaping design and maintenance services to enhance the beauty of your outdoor space.</p>
+        </section>
+        <section class="service">
+            <h2>Garden Maintenance</h2>
+            <img src="images/garden.jpg" alt="Garden Maintenance">
+            <p>Our garden maintenance services include planting, pruning, mulching, and pest control to keep your garden thriving.</p>
+        </section>
+        <section class="service">
+            <h2>Custom Projects</h2>
+            <img src="images/custom-projects.jpg" alt="Custom Projects">
+            <p>We can help you with custom garden projects, including vegetable gardens, flower beds, and water features.</p>
+        </section>
+    </div>
+    <footer>
+        <p>© 2024 Gardening Home. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

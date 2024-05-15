@@ -1,0 +1,507 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #388e3c;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+/* Accordion Styles */
+.accordion {
+    background-color: #eee; /* Light grey background for the button */
+    color: #444; /* Dark grey text */
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+}
+
+.accordion:hover, .accordion.active {
+    background-color: #ccc; /* Darker grey for hover/active state */
+}
+
+.panel {
+    padding: 0 18px;
+    display: none; /* Hidden by default */
+    background-color: white;
+    overflow: hidden;
+}
+
+
+section {
+    padding: 20px;
+    margin: 10px 5%;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 10px 5%;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.content-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-image {
+    max-width: 50%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.text-block {
+    max-width: 50%;
+}
+
+@media (max-width: 768px) {
+    .content-wrap {
+        flex-direction: column;
+    }
+
+    .intro-image {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .text-block {
+        max-width: 100%;
+    }
+}
+
+
+.featured-gardens .gallery-preview img {
+    width: 30%;
+    margin: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.latest-tips ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.latest-tips li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .intro img {
+        float: none;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .featured-gardens .gallery-preview img {
+        width: 100%;
+    }
+}
+
+
+.carousel img.blurry-load {
+    filter: blur(5px);
+    transition: filter 0.3s ease-in-out;
+}
+
+.carousel {
+    width: 100%;
+    max-width: 600px; /* Adjust based on your design */
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 100%;
+    display: block; /* Removes bottom space/gap */
+}
+
+.gallery-preview {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    position: relative;
+    width: 45%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card .card-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card.expanded {
+    flex-grow: 1;
+    transform: scale(1.05);
+}
+
+.card.expanded img {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.card.expanded .card-content {
+    opacity: 1;
+}
+/* Sticky navigation bar */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #333; /* Adjust to your desired color */
+    color: white; /* Adjust to your desired text color */
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-nav nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sticky-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.sticky-nav ul li {
+    display: inline;
+}
+
+.sticky-nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.sticky-nav ul li a:hover,
+.sticky-nav ul li a.active {
+    color: #007BFF;
+}
+
+/* Search widget styles */
+.search-container {
+    position: relative;
+}
+
+.search-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.search-input {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 16px;
+}
+
+.search-container.active .search-input {
+    width: 200px;
+    opacity: 1;
+    pointer-events: auto;
+}
+/* Toast notification styles */
+#toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    z-index: 10000;
+}
+
+.toast {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Modal styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Chatbot styles */
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.chatbot-header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-title {
+    font-size: 16px;
+}
+
+.chatbot-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chatbot-body {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.chatbot-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.chatbot-message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    max-width: 80%;
+}
+
+.chatbot-message.user {
+    background-color: #007BFF;
+    color: white;
+    align-self: flex-end;
+}
+
+.chatbot-input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.chatbot-send {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.chatbot-send:hover {
+    background-color: #0056b3;
+}
+/* Services Page Styles */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 20px 5%;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service {
+    width: 45%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.service img {
+    width: 100%;
+    max-height: 300px; /* Adjust the height as needed */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.service h2 {
+    color: #388e3c;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.service p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+/* FAQ Page Styles */
+.faq-container {
+    padding: 20px;
+    margin: 20px 5%;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.faq-list li {
+    margin: 10px 0;
+}
+
+.faq-list li a {
+    text-decoration: none;
+    color: #388e3c;
+    font-weight: bold;
+}
+
+.faq-list li a:hover {
+    text-decoration: underline;
+}
+
+.faq-container section {
+    margin-top: 20px;
+}
+
+.faq-container h3 {
+    color: #388e3c;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.faq-container p {
+    font-size: 16px;
+    line-height: 1.6;
+}

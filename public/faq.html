@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="sticky-nav">
+        <h1>Frequently Asked Questions</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+               
+            </ul>
+            <div class="search-container">
+                <button class="search-toggle">🔍</button>
+                <input type="text" class="search-input" placeholder="Search...">
+            </div>
+        </nav>
+    </header>
+    <div class="faq-container">
+        <h2>Common Questions</h2>
+        <ul class="faq-list">
+            <li><a href="#question1">How do I start a garden from scratch?</a></li>
+            <li><a href="#question2">What are the best plants for my climate?</a></li>
+            <li><a href="#question3">How can I deal with common pests organically?</a></li>
+            <li><a href="#question4">What services do you offer, and how can I book them?</a></li>
+        </ul>
+        <section id="question1">
+            <h3>How do I start a garden from scratch?</h3>
+            <p>Starting a garden from scratch involves several steps: choose a location, test the soil, prepare the soil, select the right plants, and plant them properly. Make sure to water and maintain your garden regularly.</p>
+        </section>
+        <section id="question2">
+            <h3>What are the best plants for my climate?</h3>
+            <p>The best plants for your climate depend on your local hardiness zone. Research plants that thrive in your specific zone to ensure they can withstand the weather conditions.</p>
+        </section>
+        <section id="question3">
+            <h3>How can I deal with common pests organically?</h3>
+            <p>To deal with common pests organically, you can use methods such as companion planting, introducing beneficial insects, and using natural pest control products like neem oil or diatomaceous earth.</p>
+        </section>
+        <section id="question4">
+            <h3>What services do you offer, and how can I book them?</h3>
+            <p>We offer a variety of services including lawn care, landscaping, garden maintenance, and custom projects. You can book our services by contacting us via phone, email, or through our website's contact form.</p>
+        </section>
+    </div>
+    <footer>
+        <p>© 2024 Gardening Home. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

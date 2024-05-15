@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="sticky-nav">
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="#" id="loginButton">Login</a></li>
+                
+            </ul>
+            <div class="search-container">
+                <button class="search-toggle">🔍</button>
+                <input type="text" class="search-input" placeholder="Search...">
+            </div>
+        </nav>
+    </header>
+    <form id="contactForm" action="/submit-form" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send Message</button>
+    </form>
+    <div id="toast-container"></div>
+    <button id="clearDatabaseButton" style="display:none;">Clear Database</button>
+    <button id="viewMessagesButton" style="display:none;">View Messages</button>
+    <footer>
+        <p>© 2024 Gardening Home. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Chatbot UI -->
+    <div id="chatbot" class="chatbot">
+        <div id="chatbot-header" class="chatbot-header">
+            <span class="chatbot-title">Chatbot</span>
+            <button id="chatbot-toggle" class="chatbot-toggle">-</button>
+        </div>
+        <div id="chatbot-body" class="chatbot-body">
+            <div id="chatbot-messages" class="chatbot-messages"></div>
+            <input id="chatbot-input" class="chatbot-input" type="text" placeholder="Type your message...">
+            <button id="chatbot-send" class="chatbot-send">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

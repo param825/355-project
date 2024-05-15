@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gardening Tips</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="sticky-nav">
+        <h1>Gardening Tips</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                
+            </ul>
+            <div class="search-container">
+                <button class="search-toggle">🔍</button>
+                <input type="text" class="search-input" placeholder="Search...">
+            </div>
+        </nav>
+        
+    </header>
+    <div class="tips-container">
+        <article class="tip">
+            <button class="accordion">Soil Preparation</button>
+            <div class="panel">
+                <ul>
+                    <li>Test soil pH and adjust with lime or sulfur as necessary for plant needs.</li>
+                    <li>Add organic matter annually to improve soil structure and nutrient content.</li>
+                    <li>Rotate crops to prevent soil depletion and reduce pest infestations.</li>
+                </ul>
+            </div>
+        </article>
+        <article class="tip">
+            <button class="accordion">Pest Control</button>
+            <div class="panel">
+                <ul>
+                    <li>Use companion planting to naturally repel pests (e.g., marigolds deter nematodes and other insects).</li>
+                    <li>Encourage beneficial insects like bees and ladybugs by planting diverse flowers and plants.</li>
+                    <li>Apply neem oil or diatomaceous earth as non-toxic pest control methods.</li>
+                </ul>
+            </div>
+        </article>
+        <article class="tip">
+            <button class="accordion">Watering Schedules</button>
+            <div class="panel">
+                <ul>
+                    <li>Water deeply but infrequently to encourage deep root growth and drought tolerance.</li>
+                    <li>Avoid overhead watering to prevent leaf diseases, use soaker hoses or drip irrigation instead.</li>
+                    <li>Best watering times are early morning to minimize evaporation and fungal growth.</li>
+                </ul>
+            </div>
+        </article>
+        <article class="tip">
+            <button class="accordion">Pruning Techniques</button>
+            <div class="panel">
+                <ul>
+                    <li>Prune during dormancy for most plants to prevent stress and promote healthy growth in the spring.</li>
+                    <li>Always use clean, sharp tools to make precise cuts and prevent disease transmission.</li>
+                    <li>Remove dead, damaged, or diseased branches to help the plant focus its energy on healthy growth.</li>
+                </ul>
+            </div>
+        </article>
+        <article class="tip">
+            <button class="accordion">Seasonal Planting</button>
+            <div class="panel">
+                <ul>
+                    <li>Understand your plant hardiness zone to choose plants that will thrive in your local climate.</li>
+                    <li>Plant bulbs in the fall for spring blooms and plant perennials in early spring or fall when temperatures are cooler.</li>
+                    <li>Take advantage of the growing season by starting seeds indoors in late winter for a head start on spring planting.</li>
+                </ul>
+            </div>
+        </article>
+    </div>
+    <footer>
+        <p>© 2024 Gardening Home. All rights reserved.</p>
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    });
+    </script>
+   
+</body>
+</html>
